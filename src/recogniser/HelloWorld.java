@@ -31,14 +31,14 @@ public class HelloWorld {
             System.exit(1);
         }
 
-        System.out.println("Say: (Good morning | Hello) ( Bhiksha | Evandro | Paul | Philip | Rita | Will )");
+        System.out.println("Say: (Good morning | Hello)");
 
         // loop the recognition until the programm exits.
         while (true) {
-            System.out.println("Start speaking. Press Ctrl-C to quit.\n");
+            System.out.println("Speak command:");
 
             Result result = recognizer.recognize();
-
+            
             if (result != null) {
                 String resultText = result.getBestFinalResultNoFiller();
                 System.out.println("You said: " + resultText + '\n');
